@@ -1,0 +1,148 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Added box-sizing for better box model handling */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font family to all elements */
+  font-weight: normal;
+}
+
+/* Assignment.css */
+
+/* Add shadow to profile container */
+.profile-container {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+  cursor: pointer;
+}
+
+.search-container svg {
+  color: gray;
+}
+
+/* Animation on hover */
+.profile-container:hover {
+  transform: translateY(-5px); /* Move the container up by 5 pixels on hover */
+}
+
+h2 {
+  text-align: left;
+  padding-bottom: 20px;
+  color: #878ba0;
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+.username {
+  font-size: 20px;
+}
+
+.email {
+  font-size: 12px;
+}
+
+/* Profile info styling */
+.profile-info {
+  flex-grow: 1;
+  text-align: left;
+  word-break: break-all;
+}
+
+/* Header styling */
+.header-container {
+  background-color: #8aa2f0;
+  padding: 20px;
+  position: fixed; /* Fixed positioning */
+  width: 100%; /* Full width */
+  top: 0; /* Position at the top */
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px; /* Adjust padding to prevent content from being hidden behind fixed header */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Search bar styling */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 8px 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Content styling */
+.content-container {
+  padding: 20px;
+}
+
+/* Admins and members container styling */
+.admins-container,
+.members-container {
+  margin-bottom: 40px;
+  max-width: 1200px; /* Added maximum width */
+  margin: 0 auto; /* Center the container */
+}
+
+hr {
+  margin: 50px 0;
+  background: #878ba0;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Media query */
+@media screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns */
+  }
+}
+
+/* Media query */
+@media screen and (max-width: 565px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Display a single column */
+  }
+}
